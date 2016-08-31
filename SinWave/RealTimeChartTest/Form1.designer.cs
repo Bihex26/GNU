@@ -129,7 +129,6 @@
             this.btn2D.TabIndex = 6;
             this.btn2D.Text = "2D";
             this.btn2D.UseVisualStyleBackColor = true;
-            this.btn2D.Click += new System.EventHandler(this.btn2D_Click);
             // 
             // btn3D
             // 
@@ -140,7 +139,6 @@
             this.btn3D.TabIndex = 5;
             this.btn3D.Text = "3D";
             this.btn3D.UseVisualStyleBackColor = true;
-            this.btn3D.Click += new System.EventHandler(this.btn3D_Click);
             // 
             // tbUpdateInterval
             // 
@@ -237,7 +235,6 @@
             this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "Add Data";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnStreamSe
             // 
@@ -248,7 +245,6 @@
             this.btnStreamSe.TabIndex = 12;
             this.btnStreamSe.Text = "Serialize";
             this.btnStreamSe.UseVisualStyleBackColor = true;
-            this.btnStreamSe.Click += new System.EventHandler(this.btnSerialize_Click);
             // 
             // btnClear
             // 
@@ -259,7 +255,6 @@
             this.btnClear.TabIndex = 13;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnStreamDe
             // 
@@ -270,7 +265,6 @@
             this.btnStreamDe.TabIndex = 14;
             this.btnStreamDe.Text = "De - serialize";
             this.btnStreamDe.UseVisualStyleBackColor = true;
-            this.btnStreamDe.Click += new System.EventHandler(this.btnDeserialize_Click);
             // 
             // groupBox2
             // 
@@ -293,7 +287,6 @@
             this.btnFilePathDe.TabIndex = 14;
             this.btnFilePathDe.Text = "De - serialize";
             this.btnFilePathDe.UseVisualStyleBackColor = true;
-            this.btnFilePathDe.Click += new System.EventHandler(this.btnFilePathDe_Click);
             // 
             // btnFilePathSe
             // 
@@ -304,7 +297,6 @@
             this.btnFilePathSe.TabIndex = 12;
             this.btnFilePathSe.Text = "Serialize";
             this.btnFilePathSe.UseVisualStyleBackColor = true;
-            this.btnFilePathSe.Click += new System.EventHandler(this.btnFilePathSe_Click);
             // 
             // groupBox3
             // 

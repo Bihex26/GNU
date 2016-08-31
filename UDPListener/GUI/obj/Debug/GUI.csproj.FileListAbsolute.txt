@@ -6,3 +6,6 @@ c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\GUI\obj\Deb
 c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
 c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\GUI\obj\Debug\GUI.exe
 c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\GUI\obj\Debug\GUI.pdb
+C:\Users\QuangVinh\Desktop\GNU\GNU\UDPListener\GUI\bin\Debug\GUI.exe.config
+C:\Users\QuangVinh\Desktop\GNU\GNU\UDPListener\GUI\obj\Debug\GUI.exe
+C:\Users\QuangVinh\Desktop\GNU\GNU\UDPListener\GUI\obj\Debug\GUI.pdb

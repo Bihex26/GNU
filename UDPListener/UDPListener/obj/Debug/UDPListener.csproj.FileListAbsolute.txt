@@ -10,3 +10,6 @@ C:\Users\QuangVinh\Desktop\GNU\UDPListener\UDPListener\obj\Debug\UDPListener.pdb
 C:\Users\QuangVinh\Desktop\GNU\UDPListener\UDPListener\bin\Debug\UDPListener.exe
 C:\Users\QuangVinh\Desktop\GNU\UDPListener\UDPListener\bin\Debug\UDPListener.pdb
 C:\Users\QuangVinh\Desktop\GNU\UDPListener\UDPListener\obj\Debug\UDPListener.csprojResolveAssemblyReference.cache
+C:\Users\QuangVinh\Desktop\GNU\GNU\UDPListener\UDPListener\bin\Debug\UDPListener.exe.config
+C:\Users\QuangVinh\Desktop\GNU\GNU\UDPListener\UDPListener\obj\Debug\UDPListener.exe
+C:\Users\QuangVinh\Desktop\GNU\GNU\UDPListener\UDPListener\obj\Debug\UDPListener.pdb
