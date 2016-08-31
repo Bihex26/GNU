@@ -1,0 +1,6 @@
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\UDPSender\bin\Debug\UDPSender.exe.config
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\UDPSender\bin\Debug\UDPSender.exe
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\UDPSender\bin\Debug\UDPSender.pdb
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\UDPSender\obj\Debug\UDPSender.csprojResolveAssemblyReference.cache
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\UDPSender\obj\Debug\UDPSender.exe
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\UDPSender\obj\Debug\UDPSender.pdb

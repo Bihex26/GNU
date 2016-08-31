@@ -1,0 +1,8 @@
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\GUI\bin\Debug\GUI.exe.config
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\GUI\bin\Debug\GUI.exe
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\GUI\bin\Debug\GUI.pdb
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\GUI\obj\Debug\GUI.Properties.Resources.resources
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\GUI\obj\Debug\GUI.exe
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\GUI\obj\Debug\GUI.pdb

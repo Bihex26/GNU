@@ -1,0 +1,12 @@
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\UDPListener\bin\Debug\UDPListener.exe.config
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\UDPListener\bin\Debug\UDPListener.exe
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\UDPListener\bin\Debug\UDPListener.pdb
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\UDPListener\obj\Debug\UDPListener.exe
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\UDPListener\obj\Debug\UDPListener.pdb
+c:\users\quangvinh\documents\visual studio 2015\Projects\UDPListener\UDPListener\obj\Debug\UDPListener.csprojResolveAssemblyReference.cache
+C:\Users\QuangVinh\Desktop\GNU\UDPListener\UDPListener\bin\Debug\UDPListener.exe.config
+C:\Users\QuangVinh\Desktop\GNU\UDPListener\UDPListener\obj\Debug\UDPListener.exe
+C:\Users\QuangVinh\Desktop\GNU\UDPListener\UDPListener\obj\Debug\UDPListener.pdb
+C:\Users\QuangVinh\Desktop\GNU\UDPListener\UDPListener\bin\Debug\UDPListener.exe
+C:\Users\QuangVinh\Desktop\GNU\UDPListener\UDPListener\bin\Debug\UDPListener.pdb
+C:\Users\QuangVinh\Desktop\GNU\UDPListener\UDPListener\obj\Debug\UDPListener.csprojResolveAssemblyReference.cache

@@ -1,0 +1,39 @@
+<Chart Size="575, 404" BackGradientStyle="TopBottom" BackSecondaryColor="PaleGreen" BorderlineColor="ForestGreen" BorderlineWidth="2" BorderlineDashStyle="Solid">
+  <Series>
+    <Series Name="Series1" Legend="Legend1" XValueType="DateTime" YValueType="Double" ChartType="Line" ChartArea="Defalut" Color="Firebrick" BorderColor="Red" BorderWidth="2">
+      <Points>
+        <DataPoint XValue="41836.587419421296" YValues="6" />
+        <DataPoint XValue="41836.587439675925" YValues="93" />
+        <DataPoint XValue="41836.587447268517" YValues="46" />
+        <DataPoint XValue="41836.587452870372" YValues="73" />
+        <DataPoint XValue="41836.587456493056" YValues="21" />
+        <DataPoint XValue="41836.587459386574" YValues="93" />
+        <DataPoint XValue="41836.587462094911" YValues="92" />
+        <DataPoint XValue="41836.587464814816" YValues="70" />
+        <DataPoint XValue="41836.587467164354" YValues="56" />
+        <DataPoint XValue="41836.587469872684" YValues="83" />
+        <DataPoint XValue="41836.587472407409" YValues="56" />
+        <DataPoint XValue="41836.587475115739" YValues="89" />
+        <DataPoint XValue="41836.587477650464" YValues="85" />
+        <DataPoint XValue="41836.58748" YValues="83" />
+        <DataPoint XValue="41836.587495196756" YValues="67" />
+        <DataPoint XValue="41836.58750947917" YValues="8" />
+      </Points>
+    </Series>
+  </Series>
+  <Legends>
+    <Legend Name="Legend1">
+    </Legend>
+  </Legends>
+  <ChartAreas>
+    <ChartArea BackColor="White" BackGradientStyle="TopBottom" BackSecondaryColor="PaleGreen" Name="Defalut">
+      <AxisX LabelAutoFitStyle="IncreaseFont, DecreaseFont, StaggeredLabels, WordWrap">
+        <ScaleView SizeType="Seconds" />
+      </AxisX>
+      <Position X="4.536885" Y="5.508361" Width="90.15778" Height="87.7291" Auto="False" />
+      <InnerPlotPosition X="9.31973" Y="3.5906" Width="88.93334" Height="85.39538" Auto="False" />
+      <Area3DStyle IsRightAngleAxes="False" Inclination="20" Rotation="50" WallWidth="21" PointDepth="200" />
+    </ChartArea>
+  </ChartAreas>
+  <BorderSkin SkinStyle="Emboss" BackColor="HighlightText" BackSecondaryColor="255, 128, 128" BorderWidth="23" BorderDashStyle="Solid" />
+</Chart>
