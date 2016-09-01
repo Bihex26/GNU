@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.IO;
+using System.Net;
+using System.Net.Sockets;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -14,34 +12,64 @@ namespace LineChartTEST
 {
     public partial class Form1 : Form
     {
+        class Point
+        {
+            public double X { get; set; }
+            public double Y { get; set; }
+
+            public Point()
+            {
+                X = 0;
+                Y = 0;
+            }
+
+            public Point(double x, double y)
+            {
+                X = x;
+                Y = y;
+            }
+        }
+
         private delegate void CanIJust();
-        private List<int> _valueList;
+
+        //private List<int> _valueList;
+        private List<Point> _pointsList;
         private Thread _thread;
         private CanIJust _doIt;
         private Random _ran;
         private int _interval;
         private List<double> _timeList;
         private List<int> _customValueList;
-        
+        private const int ListenPort = 5000;
+        private static readonly int XMaxSize = 256;
+
         public Form1()
         {
             InitializeComponent();
 
             chart1.ChartAreas[0].AxisX.IsStartedFromZero = true;
             chart1.ChartAreas[0].AxisX.ScaleView.Zoomable = false;
-            chart1.Series[0].XValueType = ChartValueType.Time;
-            chart1.ChartAreas[0].AxisX.LabelStyle.Format = "HH:mm:ss.fff";
-            chart1.ChartAreas[0].AxisX.ScaleView.SizeType = DateTimeIntervalType.Milliseconds;
-            chart1.ChartAreas[0].AxisX.IntervalAutoMode = IntervalAutoMode.FixedCount;
-            chart1.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Milliseconds;
-            chart1.ChartAreas[0].AxisX.Interval = 0;
+            chart1.Series[0].XValueType = ChartValueType.Double;
+            chart1.Series[0].YValueType = ChartValueType.Double;
+            chart1.ChartAreas[0].AxisX.LabelStyle.Format = "{##.##}Hz";
+            chart1.ChartAreas[0].AxisY.LabelStyle.Format = "{##.##}dB";
+            //chart1.ChartAreas[0].AxisX.ScaleView.SizeType = IntervalType.Number;
+            //chart1.ChartAreas[0].AxisX.IntervalAutoMode = IntervalAutoMode.FixedCount;
+            //chart1.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Auto;
+            //chart1.ChartAreas[0].AxisX.Interval = 0;
 
-            _valueList = new List<int>();
+            //_valueList = new List<int>();
+            _pointsList = new List<Point>();
             _ran = new Random();
-            _interval = 500;
-            tbUpdateInterval.Text = "500";
-            GoBoy();
+            _interval = 1;
+            //tbUpdateInterval.Text = "500";
 
+            //Begin to listen
+            //UDPListener();
+            Task task = Task.Factory.StartNew(UDPListener);
+
+            //Draw
+            GoBoy();
 
             _timeList = new List<double>();
             _customValueList = new List<int>();
@@ -50,9 +78,10 @@ namespace LineChartTEST
         private void GoBoy()
         {
             _doIt += new CanIJust(AddData);
+
             DateTime now = DateTime.Now;
-            chart1.ChartAreas[0].AxisX.Minimum = now.ToOADate();
-            chart1.ChartAreas[0].AxisX.Maximum = now.AddSeconds(10).ToOADate();
+            chart1.ChartAreas[0].AxisX.Minimum = -50;
+            chart1.ChartAreas[0].AxisX.Maximum = 50;
 
 
             _thread = new Thread(new ThreadStart(ComeOnYouThread));
@@ -78,30 +107,40 @@ namespace LineChartTEST
 
         private void AddData()
         {
-            DateTime now = DateTime.Now;
-            //Insert a number into the list.
-            _valueList.Add(_ran.Next(0, 100));
-
-
             chart1.ResetAutoValues();
+            chart1.Series[0].Points.Clear();
 
-            //Remove old datas from the chart.
-            if (chart1.Series[0].Points.Count > 0)
+            if (_pointsList.Count >= XMaxSize)
             {
-                while (chart1.Series[0].Points[0].XValue < now.AddSeconds(-5).ToOADate())
+                for (int i = 0; i < XMaxSize; i++)
                 {
-                    chart1.Series[0].Points.RemoveAt(0);
-
-                    chart1.ChartAreas[0].AxisX.Minimum = chart1.Series[0].Points[0].XValue;
-                    chart1.ChartAreas[0].AxisX.Maximum = now.AddSeconds(5).ToOADate();
+                    chart1.Series[0].Points.AddXY(_pointsList[i].X , _pointsList[i].Y);
                 }
+                _pointsList.RemoveRange(0, XMaxSize);
             }
 
-            //Insert a data into the chart.
-            
-            chart1.Series[0].Points.AddXY(now.ToOADate(), _valueList[_valueList.Count - 1]);
-            
             chart1.Invalidate();
+        }
+
+        ////Clear list
+        //_pointsList.Clear();
+
+        #region Unused
+
+        private void btnUpdateInterval_Click(object sender, EventArgs e)
+        {
+            int interval = 0;
+            if (int.TryParse(tbUpdateInterval.Text, out interval))
+            {
+                if (interval > 0)
+                    _interval = interval;
+                else
+                    MessageBox.Show("The data should be more than 0");
+            }
+            else
+            {
+                MessageBox.Show("Inappropriate data.");
+            }
         }
 
         protected override void OnClosed(EventArgs e)
@@ -127,25 +166,9 @@ namespace LineChartTEST
             chart1.ChartAreas[0].Area3DStyle.Enable3D = true;
         }
 
-        private void btnUpdateInterval_Click(object sender, EventArgs e)
-        {
-            int interval = 0;
-            if (int.TryParse(tbUpdateInterval.Text, out interval))
-            {
-                if (interval > 0)
-                    _interval = interval;
-                else
-                    MessageBox.Show("The data should be more than 0");
-            }
-            else
-            {
-                MessageBox.Show("Inappropriate data.");
-            }
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
-        {            
-            _customValueList.Add(_ran.Next(0,100));
+        {
+            _customValueList.Add(_ran.Next(0, 100));
             _timeList.Add(DateTime.Now.ToOADate());
             UpdateSecondChart();
         }
@@ -191,7 +214,7 @@ namespace LineChartTEST
         {
             chart2.Series[0].Points.Clear();
         }
-        
+
         private void btnFilePathSe_Click(object sender, EventArgs e)
         {
             try
@@ -224,7 +247,41 @@ namespace LineChartTEST
             string filePath = Application.StartupPath + "\\ChartData_FilePath.xml";
             chart2.Serializer.Reset();
             chart2.Serializer.Load(filePath);
-            
+
         }
+
+        #endregion
+
+        public void UDPListener()
+        {
+            UdpClient listener = new UdpClient(ListenPort);
+            IPEndPoint groupEp = new IPEndPoint(IPAddress.Any, ListenPort);
+
+            while (true)
+            {
+                //if (_pointsList.Count < XMaxSize)
+                //{
+                    var receiveByteArray = listener.Receive(ref groupEp);
+
+                    if (receiveByteArray.Length != 0)
+                    {
+                        float[] fArray = new float[receiveByteArray.Length/4];
+
+                        for (int i = 0; i < receiveByteArray.Length/4; i++)
+                            fArray[i] = BitConverter.ToSingle(receiveByteArray, i*4);
+
+                        for (var i = 0; i < fArray.Length; i++)
+                        {
+                            _pointsList.Add(new Point(fArray[i], fArray[i + 1]));
+                            i++;
+                        }
+                    }
+                //}
+                //else
+                //    Thread.Sleep(10);
+            }
+            //listener.Close();
+        }
+
     }
 }

@@ -16,3 +16,12 @@ C:\Users\QuangVinh\Desktop\New folder (2)\RealTimeChartTest\obj\Debug\RealTimeCh
 C:\Users\QuangVinh\Desktop\New folder (2)\RealTimeChartTest\obj\Debug\LineChartTEST.Form1.resources
 C:\Users\QuangVinh\Desktop\New folder (2)\RealTimeChartTest\obj\Debug\RealTimeChartTest.Properties.Resources.resources
 C:\Users\QuangVinh\Desktop\New folder (2)\RealTimeChartTest\obj\Debug\RealTimeChartTest.csproj.GenerateResource.Cache
+C:\Users\QuangVinh\Desktop\GNU\GNU\SinWave\RealTimeChartTest\bin\Debug\RealTimeChartTest.exe.config
+C:\Users\QuangVinh\Desktop\GNU\GNU\SinWave\RealTimeChartTest\bin\Debug\RealTimeChartTest.exe
+C:\Users\QuangVinh\Desktop\GNU\GNU\SinWave\RealTimeChartTest\bin\Debug\RealTimeChartTest.pdb
+C:\Users\QuangVinh\Desktop\GNU\GNU\SinWave\RealTimeChartTest\obj\Debug\LineChartTEST.Form1.resources
+C:\Users\QuangVinh\Desktop\GNU\GNU\SinWave\RealTimeChartTest\obj\Debug\RealTimeChartTest.Properties.Resources.resources
+C:\Users\QuangVinh\Desktop\GNU\GNU\SinWave\RealTimeChartTest\obj\Debug\RealTimeChartTest.csproj.GenerateResource.Cache
+C:\Users\QuangVinh\Desktop\GNU\GNU\SinWave\RealTimeChartTest\obj\Debug\RealTimeChartTest.exe
+C:\Users\QuangVinh\Desktop\GNU\GNU\SinWave\RealTimeChartTest\obj\Debug\RealTimeChartTest.pdb
+C:\Users\QuangVinh\Desktop\GNU\GNU\SinWave\RealTimeChartTest\obj\Debug\RealTimeChartTest.csprojResolveAssemblyReference.cache
